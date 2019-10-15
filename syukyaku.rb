@@ -160,4 +160,5 @@ msg += "```"
 puts msg
 
 slack = Slack::Incoming::Webhooks.new(ENV['SYUKYAKU_WEBHOOK_URL'])
+# slack = Slack::Incoming::Webhooks.new(ENV['DEV_WEBHOOK_URL'])
 slack.post(msg)
