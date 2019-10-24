@@ -161,4 +161,6 @@ puts msg
 
 slack = Slack::Incoming::Webhooks.new(ENV['SYUKYAKU_WEBHOOK_URL'])
 # slack = Slack::Incoming::Webhooks.new(ENV['DEV_WEBHOOK_URL'])
+slack_2 = Slack::Incoming::Webhooks.new(ENV['INTERN_SYUKYAKU_WEBHOOK_URL'])
 slack.post(msg)
+slack_2.post(msg)
