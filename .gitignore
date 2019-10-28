@@ -2,4 +2,5 @@ client_id.json
 client_secret.json
 dev_syukyaku.rb
 vendor/bundle
+vendor
 .bundle
