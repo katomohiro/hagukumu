@@ -118,13 +118,14 @@ def get_team_mii_history_text(mii_history, team_name)
   msg += "合計【#{total_mii}mii】\n"
   msg += "---------\n"
   msg += "\n"
-  msg += "入力はこちらから↓\n"
-  msg += "https://docs.google.com/spreadsheets/d/1iJj3ujYwuWksiXW4W-Dyr5g0RKToPH72uBXJOeV4W5o/edit?usp=sharing\n"
 end
+
 mii_history.each do |team, history|
   msg += get_team_mii_history_text(mii_history, team)
 end
 msg += "```"
+msg += "入力はこちらから↓\n"
+msg += "https://docs.google.com/spreadsheets/d/1iJj3ujYwuWksiXW4W-Dyr5g0RKToPH72uBXJOeV4W5o/edit?usp=sharing\n"
 
 puts msg
 
