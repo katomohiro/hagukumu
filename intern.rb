@@ -4,11 +4,11 @@ require 'slack/incoming/webhooks'
 require 'date'
 
 # スプレッドシートの名前
-MII_HISTORY_WS_ID = 0
+MII_HISTORY_WS_TITLE = "【#{Date.today.month}月】mii達成一覧"
 CONFIG_WS_ID = 319868657
 
 # 目標mii
-TARGET_MII = 2000
+TARGET_MII = 4000
 
 # カラムの位置を特定するための行番号
 COLUMN_NAME_ROW = 1
@@ -19,7 +19,7 @@ session = GoogleDrive::Session.from_config("client_secret.json")
 # MII_SPREADSHEET_ID="1iJj3ujYwuWksiXW4W-Dyr5g0RKToPH72uBXJOeV4W5o"
 # ss = session.spreadsheet_by_key(MII_SPREADSHEET_ID)
 ss = session.spreadsheet_by_key(ENV['MII_SPREADSHEET_ID'])
-mii_history_ws = ss.worksheet_by_gid(MII_HISTORY_WS_ID)
+mii_history_ws = ss.worksheet_by_title(MII_HISTORY_WS_TITLE)
 config_ws = ss.worksheet_by_gid(CONFIG_WS_ID)
 
 mii_history = {}
@@ -91,7 +91,7 @@ date = Date.today
 msg = "<!channel> \n"
 msg += "#{date.year}.#{date.month}.#{date.day} mii達成状況速報\n"
 msg += "```\n"
-msg += "＼#{Date.today.month + 1}月目標#{TARGET_MII}mii！／\n"
+msg += "＼#{Date.today.month}月目標#{TARGET_MII}mii！／\n"
 msg += "\n"
 
 def get_team_mii_history_text(mii_history, team_name)
