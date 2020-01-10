@@ -7,10 +7,10 @@ require 'date'
 SYUUKYAKUKANRI_WS_TITLE = "顧客管理"
 
 # クラス名
-LDS_CLASS_TOKYO_1 = "東京18期"
-LDS_CLASS_TOKYO_2 = "東京19期"
-LDS_CLASS_ONLINE_1 = "オンライン4期"
-LDS_CLASS_ONLINE_2 = "オンライン5期"
+LDS_CLASS_TOKYO_1 = "東京20期"
+LDS_CLASS_TOKYO_2 = "東京21期"
+LDS_CLASS_ONLINE_1 = "オンライン6期"
+LDS_CLASS_ONLINE_2 = "オンライン7期"
 
 # 全国目標人数
 TARGET_NUMBER = 110
